@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+let screenSize: CGRect = UIScreen.mainScreen().bounds
 
+class ViewController: UIViewController, UIScrollViewDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,6 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = CGSizeMake(scrollView.frame.width*3, scrollView.frame.height*3);
         scrollView.delegate = self
         scrollView.bounces = false
+        ;
         
         view.addSubview(scrollView)
         var i:Double = 0
@@ -32,8 +35,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 var cgyFloat = CGFloat(yFloat)
                 var xPos:CGFloat = cgxFloat * (scrollView.contentSize.width)
                 var yPos:CGFloat = cgyFloat * (scrollView.contentSize.height)
-                let colorView = UIView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height))
+                let colorView = AboutView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height))
                 colorView.backgroundColor = getRandomColor()
+                colorView.setTDTitleString("\(i), \(y)");
                 scrollView.addSubview(colorView)
             }
         }
@@ -45,18 +49,67 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func getRandomColor() -> UIColor{
         
-        var randomRed:CGFloat = CGFloat(drand48())
         
-        var randomGreen:CGFloat = CGFloat(drand48())
+        var randomRed:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         
-        var randomBlue:CGFloat = CGFloat(drand48())
+        var randomGreen:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        
+        var randomBlue:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
         
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        println(scrollView.contentOffset)
+    
+    }
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        
+        let screenWidthHalf = screenSize.width/2;
+        let screenHeightHalf = screenSize.height/2;
+        
+        let contentSizeThirdWidth = scrollView.contentSize.width/3
+        let contentSizeThirdHeight = scrollView.contentSize.height/3
+        
+        
+        if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight) {
+            println("Upper left")
+            
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        }
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth * 2) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight) {
+            println("upper middle ")
+            scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, 0), animated: true)
+        }
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth * 3) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight) {
+            println("upper right ")
+            scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, 0), animated: true)
+        }
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight * 2) {
+            println("Middle left")
+            scrollView.setContentOffset(CGPointMake(0, contentSizeThirdHeight), animated: true)
+        }
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth * 2) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight * 2) {
+            println("Middle ")
+            scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+        }
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth * 3) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight * 2) {
+            println("Middle right")
+            scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight), animated: true)
+        }
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight * 3) {
+            println("bottom left")
+            scrollView.setContentOffset(CGPointMake(0, contentSizeThirdHeight * 2), animated: true)
+        }
+            
+        else if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth * 2) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight * 3) {
+            println("bottom middle")
+            scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight * 2), animated: true)
+        }
+        else {
+            println("bottom right")
+            scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight * 2), animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
