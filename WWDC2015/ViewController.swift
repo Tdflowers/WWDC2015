@@ -10,22 +10,27 @@ import UIKit
 
 let screenSize: CGRect = UIScreen.mainScreen().bounds
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, HomeViewControllerDelegate {
+    
+    lazy var homeScrollView = UIScrollView();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let scrollView = UIScrollView(frame: CGRectMake(0, 0, self.view.frame.size.width, view.frame.size.height))
-        scrollView.userInteractionEnabled = true
-        scrollView.contentSize = CGSizeMake(scrollView.frame.width*3, scrollView.frame.height*3);
-        scrollView.delegate = self
-        scrollView.bounces = false
-        ;
+        self.homeScrollView = UIScrollView(frame: CGRectMake(0, 0, view.frame.size.width, view.frame.size.height))
+        homeScrollView.userInteractionEnabled = true
+        homeScrollView.contentSize = CGSizeMake(homeScrollView.frame.width*3, homeScrollView.frame.height*3);
+        homeScrollView.delegate = self
+        homeScrollView.bounces = false
+        homeScrollView.showsHorizontalScrollIndicator = false
+        homeScrollView.showsVerticalScrollIndicator = false
         
-        view.addSubview(scrollView)
+        view.addSubview(homeScrollView)
         var i:Double = 0
         var y:Double = 0
+        
+        var num = 0
         
         for i in 0...2{
             for y in 0...2{
@@ -33,36 +38,32 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 var yFloat:Double = Double(y)/3.0
                 var cgxFloat = CGFloat(xFloat)
                 var cgyFloat = CGFloat(yFloat)
-                var xPos:CGFloat = cgxFloat * (scrollView.contentSize.width)
-                var yPos:CGFloat = cgyFloat * (scrollView.contentSize.height)
-                let colorView = AboutView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height))
-                colorView.backgroundColor = getRandomColor()
-                colorView.setTDTitleString("\(i), \(y)");
-                scrollView.addSubview(colorView)
+                var xPos:CGFloat = cgxFloat * (homeScrollView.contentSize.width)
+                var yPos:CGFloat = cgyFloat * (homeScrollView.contentSize.height)
+                if i == 1 && y==1 {
+                    let homeView = HomeView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height))
+                    homeView.delegate = self
+                    homeScrollView.addSubview(homeView)
+                } else {
+                    let colorView = AboutView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height), num:num)
+                    colorView.titleLabel.font = UIFont(name: "HelveticaNeue-Medium",
+                        size: 25.0)
+                    homeScrollView.addSubview(colorView)
+                    num++
+                }
+                
             }
         }
         
         
-        scrollView.setContentOffset(CGPointMake(scrollView.contentSize.width/3, scrollView.contentSize.height/3), animated: false)
-        
-    }
-    
-    func getRandomColor() -> UIColor{
-        
-        
-        var randomRed:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        
-        var randomGreen:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        
-        var randomBlue:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        
-        return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
+        homeScrollView.setContentOffset(CGPointMake(homeScrollView.contentSize.width/3, homeScrollView.contentSize.height/3), animated: false)
         
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
     
     }
+    /*
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         
         let screenWidthHalf = screenSize.width/2;
@@ -109,6 +110,40 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         else {
             println("bottom right")
             scrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight * 2), animated: true)
+        }
+    }
+    */
+    
+    func updateContentOffsetPosition(withTag: Int) {
+        let contentSizeThirdWidth = homeScrollView.contentSize.width/5 * 2
+        let contentSizeThirdHeight = homeScrollView.contentSize.height/5 * 2
+        switch (withTag) {
+        case 1:
+            self.homeScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+            break;
+        case 2:
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, 0), animated: true)
+            break;
+        case 3:
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, 0), animated: true)
+            break;
+        case 4:
+            self.homeScrollView.setContentOffset(CGPointMake(0, contentSizeThirdHeight), animated: true)
+            break;
+        case 5:
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight), animated: true)
+            break;
+        case 6:
+            self.homeScrollView.setContentOffset(CGPointMake(0, contentSizeThirdHeight * 2), animated: true)
+            break;
+        case 7:
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight * 2), animated: true)
+            break;
+        case 8:
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight * 2), animated: true)
+            break;
+        default:
+            break;
         }
     }
 

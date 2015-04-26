@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F8BE6A81AEC474F00C982F0 /* me.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8BE6A71AEC474F00C982F0 /* me.jpg */; };
+		2F8BE6AA1AEC48E000C982F0 /* ViewsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F8BE6A91AEC48E000C982F0 /* ViewsInfo.plist */; };
 		2F8EE49B1AEB0D9800BA77B5 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EE49A1AEB0D9800BA77B5 /* AboutView.swift */; };
 		2FAA21271AEA1BC700EBE0E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA21261AEA1BC700EBE0E8 /* AppDelegate.swift */; };
 		2FAA21291AEA1BC700EBE0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA21281AEA1BC700EBE0E8 /* ViewController.swift */; };
@@ -14,6 +16,17 @@
 		2FAA212E1AEA1BC700EBE0E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FAA212D1AEA1BC700EBE0E8 /* Images.xcassets */; };
 		2FAA21311AEA1BC800EBE0E8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FAA212F1AEA1BC800EBE0E8 /* LaunchScreen.xib */; };
 		2FAA213D1AEA1BC800EBE0E8 /* WWDC2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA213C1AEA1BC800EBE0E8 /* WWDC2015Tests.swift */; };
+		2FE85B7C1AEB91A700E84EC5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE85B7B1AEB91A700E84EC5 /* HomeView.swift */; };
+		2FE85B7E1AEBB13800E84EC5 /* wwdcLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B7D1AEBB13800E84EC5 /* wwdcLogo.png */; };
+		2FE85B891AEBB79000E84EC5 /* yellowCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B811AEBB78F00E84EC5 /* yellowCircle.png */; };
+		2FE85B8A1AEBB79000E84EC5 /* orangeCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B821AEBB78F00E84EC5 /* orangeCircle.png */; };
+		2FE85B8B1AEBB79000E84EC5 /* pinkCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B831AEBB78F00E84EC5 /* pinkCircle.png */; };
+		2FE85B8C1AEBB79000E84EC5 /* blueCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B841AEBB78F00E84EC5 /* blueCircle.png */; };
+		2FE85B8D1AEBB79000E84EC5 /* tealSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B851AEBB78F00E84EC5 /* tealSquare.png */; };
+		2FE85B8E1AEBB79000E84EC5 /* orangeSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B861AEBB79000E84EC5 /* orangeSquare.png */; };
+		2FE85B8F1AEBB79000E84EC5 /* pinkSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B871AEBB79000E84EC5 /* pinkSquare.png */; };
+		2FE85B901AEBB79000E84EC5 /* purpleSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B881AEBB79000E84EC5 /* purpleSquare.png */; };
+		2FE85B931AEBBC2000E84EC5 /* wwdcLogoNoCorners.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE85B921AEBBC2000E84EC5 /* wwdcLogoNoCorners.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F8BE6A71AEC474F00C982F0 /* me.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.jpg; sourceTree = "<group>"; };
+		2F8BE6A91AEC48E000C982F0 /* ViewsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ViewsInfo.plist; sourceTree = "<group>"; };
 		2F8EE49A1AEB0D9800BA77B5 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		2FAA21211AEA1BC700EBE0E8 /* WWDC2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAA21251AEA1BC700EBE0E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +53,17 @@
 		2FAA21361AEA1BC800EBE0E8 /* WWDC2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WWDC2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAA213B1AEA1BC800EBE0E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FAA213C1AEA1BC800EBE0E8 /* WWDC2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC2015Tests.swift; sourceTree = "<group>"; };
+		2FE85B7B1AEB91A700E84EC5 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2FE85B7D1AEBB13800E84EC5 /* wwdcLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wwdcLogo.png; sourceTree = "<group>"; };
+		2FE85B811AEBB78F00E84EC5 /* yellowCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowCircle.png; sourceTree = "<group>"; };
+		2FE85B821AEBB78F00E84EC5 /* orangeCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeCircle.png; sourceTree = "<group>"; };
+		2FE85B831AEBB78F00E84EC5 /* pinkCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkCircle.png; sourceTree = "<group>"; };
+		2FE85B841AEBB78F00E84EC5 /* blueCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueCircle.png; sourceTree = "<group>"; };
+		2FE85B851AEBB78F00E84EC5 /* tealSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tealSquare.png; sourceTree = "<group>"; };
+		2FE85B861AEBB79000E84EC5 /* orangeSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeSquare.png; sourceTree = "<group>"; };
+		2FE85B871AEBB79000E84EC5 /* pinkSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkSquare.png; sourceTree = "<group>"; };
+		2FE85B881AEBB79000E84EC5 /* purpleSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleSquare.png; sourceTree = "<group>"; };
+		2FE85B921AEBBC2000E84EC5 /* wwdcLogoNoCorners.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wwdcLogoNoCorners.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +108,15 @@
 				2FAA21261AEA1BC700EBE0E8 /* AppDelegate.swift */,
 				2FAA21281AEA1BC700EBE0E8 /* ViewController.swift */,
 				2F8EE49A1AEB0D9800BA77B5 /* AboutView.swift */,
+				2F8BE6A91AEC48E000C982F0 /* ViewsInfo.plist */,
+				2F8BE6A71AEC474F00C982F0 /* me.jpg */,
+				2FE85B7B1AEB91A700E84EC5 /* HomeView.swift */,
+				2FE85B921AEBBC2000E84EC5 /* wwdcLogoNoCorners.png */,
+				2FE85B7D1AEBB13800E84EC5 /* wwdcLogo.png */,
 				2FAA212A1AEA1BC700EBE0E8 /* Main.storyboard */,
 				2FAA212D1AEA1BC700EBE0E8 /* Images.xcassets */,
 				2FAA212F1AEA1BC800EBE0E8 /* LaunchScreen.xib */,
+				2FE85B911AEBB7F300E84EC5 /* Resources */,
 				2FAA21241AEA1BC700EBE0E8 /* Supporting Files */,
 			);
 			path = WWDC2015;
@@ -113,6 +145,21 @@
 				2FAA213B1AEA1BC800EBE0E8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2FE85B911AEBB7F300E84EC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2FE85B811AEBB78F00E84EC5 /* yellowCircle.png */,
+				2FE85B821AEBB78F00E84EC5 /* orangeCircle.png */,
+				2FE85B831AEBB78F00E84EC5 /* pinkCircle.png */,
+				2FE85B841AEBB78F00E84EC5 /* blueCircle.png */,
+				2FE85B851AEBB78F00E84EC5 /* tealSquare.png */,
+				2FE85B861AEBB79000E84EC5 /* orangeSquare.png */,
+				2FE85B871AEBB79000E84EC5 /* pinkSquare.png */,
+				2FE85B881AEBB79000E84EC5 /* purpleSquare.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +242,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8BE6A81AEC474F00C982F0 /* me.jpg in Resources */,
 				2FAA212C1AEA1BC700EBE0E8 /* Main.storyboard in Resources */,
+				2FE85B8D1AEBB79000E84EC5 /* tealSquare.png in Resources */,
+				2FE85B8A1AEBB79000E84EC5 /* orangeCircle.png in Resources */,
+				2FE85B931AEBBC2000E84EC5 /* wwdcLogoNoCorners.png in Resources */,
+				2FE85B7E1AEBB13800E84EC5 /* wwdcLogo.png in Resources */,
+				2FE85B891AEBB79000E84EC5 /* yellowCircle.png in Resources */,
+				2F8BE6AA1AEC48E000C982F0 /* ViewsInfo.plist in Resources */,
+				2FE85B8F1AEBB79000E84EC5 /* pinkSquare.png in Resources */,
+				2FE85B901AEBB79000E84EC5 /* purpleSquare.png in Resources */,
 				2FAA21311AEA1BC800EBE0E8 /* LaunchScreen.xib in Resources */,
 				2FAA212E1AEA1BC700EBE0E8 /* Images.xcassets in Resources */,
+				2FE85B8C1AEBB79000E84EC5 /* blueCircle.png in Resources */,
+				2FE85B8E1AEBB79000E84EC5 /* orangeSquare.png in Resources */,
+				2FE85B8B1AEBB79000E84EC5 /* pinkCircle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAA21291AEA1BC700EBE0E8 /* ViewController.swift in Sources */,
+				2FE85B7C1AEB91A700E84EC5 /* HomeView.swift in Sources */,
 				2F8EE49B1AEB0D9800BA77B5 /* AboutView.swift in Sources */,
 				2FAA21271AEA1BC700EBE0E8 /* AppDelegate.swift in Sources */,
 			);

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>views</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>NoteSnap</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is about Notesnap</string>
+			<key>titleRed</key>
+			<string>240</string>
+			<key>titleBlue</key>
+			<string>238</string>
+			<key>titleGreen</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Past</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is about my past</string>
+			<key>titleRed</key>
+			<string>198</string>
+			<key>titleBlue</key>
+			<string>253</string>
+			<key>titleGreen</key>
+			<string>107</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Time Marks</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is about Time Marks</string>
+			<key>titleRed</key>
+			<string>52</string>
+			<key>titleBlue</key>
+			<string>255</string>
+			<key>titleGreen</key>
+			<string>105</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>About Me</string>
+			<key>image</key>
+			<string>me.jpg</string>
+			<key>text</key>
+			<string>This is about me</string>
+			<key>titleRed</key>
+			<string>255</string>
+			<key>titleGreen</key>
+			<string>150</string>
+			<key>titleBlue</key>
+			<string>255</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Fun Facts</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is some cool things about me</string>
+			<key>titleRed</key>
+			<string>95</string>
+			<key>titleGreen</key>
+			<string>242</string>
+			<key>titleBlue</key>
+			<string>230</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Fess</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is about Fess</string>
+			<key>titleRed</key>
+			<string>255</string>
+			<key>titleGreen</key>
+			<string>60</string>
+			<key>titleBlue</key>
+			<string>91</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Future</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is about my Future</string>
+			<key>titleRed</key>
+			<string>255</string>
+			<key>titleGreen</key>
+			<string>167</string>
+			<key>titleBlue</key>
+			<string>147</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>EVHS</string>
+			<key>image</key>
+			<string></string>
+			<key>text</key>
+			<string>This is about EVHS</string>
+			<key>titleRed</key>
+			<string>255</string>
+			<key>titleGreen</key>
+			<string>192</string>
+			<key>titleBlue</key>
+			<string>68</string>
+		</dict>
+	</array>
+</dict>
+</plist>
