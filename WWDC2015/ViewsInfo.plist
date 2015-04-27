@@ -8,9 +8,9 @@
 			<key>title</key>
 			<string>NoteSnap</string>
 			<key>image</key>
-			<string></string>
+			<string>notesnap.jpeg</string>
 			<key>text</key>
-			<string>This is about Notesnap</string>
+			<string>Notesnap is an App I built with 1sb body. This app allows students to share homework and comment on it. I built the camera with automatic square detection and screwing.</string>
 			<key>titleRed</key>
 			<string>240</string>
 			<key>titleBlue</key>
@@ -22,9 +22,9 @@
 			<key>title</key>
 			<string>Past</string>
 			<key>image</key>
-			<string></string>
+			<string>IMG_6010.jpeg</string>
 			<key>text</key>
-			<string>This is about my past</string>
+			<string>I grew up in silicon Valley absolutely loving every moment of it. I still to this day love every second of it. I have been programming for a few years and made WWDC scholar last year and hope to do it again!</string>
 			<key>titleRed</key>
 			<string>198</string>
 			<key>titleBlue</key>
@@ -38,7 +38,7 @@
 			<key>image</key>
 			<string></string>
 			<key>text</key>
-			<string>This is about Time Marks</string>
+			<string>I built time marks to better the video recording at my church. By starting a counter with time we were able to track when slides changes or other key events were without having to watch the video again.</string>
 			<key>titleRed</key>
 			<string>52</string>
 			<key>titleBlue</key>
@@ -52,7 +52,7 @@
 			<key>image</key>
 			<string>me.jpg</string>
 			<key>text</key>
-			<string>This is about me</string>
+			<string>I currently live in the San Jose area and am attending San Jose City College to transfer to Cal Poly SLO for a BS in computer science. I also enjoy playing music and going to church as well as programming.</string>
 			<key>titleRed</key>
 			<string>255</string>
 			<key>titleGreen</key>
@@ -62,11 +62,11 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Fun Facts</string>
+			<string></string>
 			<key>image</key>
 			<string></string>
 			<key>text</key>
-			<string>This is some cool things about me</string>
+			<string></string>
 			<key>titleRed</key>
 			<string>95</string>
 			<key>titleGreen</key>
@@ -78,9 +78,9 @@
 			<key>title</key>
 			<string>Fess</string>
 			<key>image</key>
-			<string></string>
+			<string>fess.png</string>
 			<key>text</key>
-			<string>This is about Fess</string>
+			<string>Fess was another App I worked on with 1StudentBody similar to secret. The app had thousands of users and I added many key features to bring in even more. It was one of the first places I messed with location to create a user generated list of schools for those that weren&apos;t in the database.</string>
 			<key>titleRed</key>
 			<string>255</string>
 			<key>titleGreen</key>
@@ -90,11 +90,11 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>Future</string>
+			<string></string>
 			<key>image</key>
 			<string></string>
 			<key>text</key>
-			<string>This is about my Future</string>
+			<string></string>
 			<key>titleRed</key>
 			<string>255</string>
 			<key>titleGreen</key>
@@ -104,17 +104,17 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>EVHS</string>
+			<string></string>
 			<key>image</key>
 			<string></string>
 			<key>text</key>
-			<string>This is about EVHS</string>
+			<string></string>
 			<key>titleRed</key>
 			<string>255</string>
 			<key>titleGreen</key>
-			<string>192</string>
+			<string>167</string>
 			<key>titleBlue</key>
-			<string>68</string>
+			<string>147</string>
 		</dict>
 	</array>
 </dict>

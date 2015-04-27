@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F75D6D01AEDA137009B58BC /* notesnap.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2F75D6CF1AEDA137009B58BC /* notesnap.jpeg */; };
+		2F75D6D21AEDA5E6009B58BC /* IMG_6010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F75D6D11AEDA5E6009B58BC /* IMG_6010.jpg */; };
+		2F75D6D41AEDA96F009B58BC /* fess.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F75D6D31AEDA96F009B58BC /* fess.png */; };
+		2F75D6D61AEDAC7D009B58BC /* 11021184_10205358114785703_2999020130509293661_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F75D6D51AEDAC7D009B58BC /* 11021184_10205358114785703_2999020130509293661_n.jpg */; };
 		2F8BE6A81AEC474F00C982F0 /* me.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F8BE6A71AEC474F00C982F0 /* me.jpg */; };
 		2F8BE6AA1AEC48E000C982F0 /* ViewsInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F8BE6A91AEC48E000C982F0 /* ViewsInfo.plist */; };
 		2F8EE49B1AEB0D9800BA77B5 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8EE49A1AEB0D9800BA77B5 /* AboutView.swift */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F75D6CF1AEDA137009B58BC /* notesnap.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notesnap.jpeg; sourceTree = "<group>"; };
+		2F75D6D11AEDA5E6009B58BC /* IMG_6010.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_6010.jpg; sourceTree = "<group>"; };
+		2F75D6D31AEDA96F009B58BC /* fess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fess.png; sourceTree = "<group>"; };
+		2F75D6D51AEDAC7D009B58BC /* 11021184_10205358114785703_2999020130509293661_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11021184_10205358114785703_2999020130509293661_n.jpg; sourceTree = "<group>"; };
 		2F8BE6A71AEC474F00C982F0 /* me.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.jpg; sourceTree = "<group>"; };
 		2F8BE6A91AEC48E000C982F0 /* ViewsInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ViewsInfo.plist; sourceTree = "<group>"; };
 		2F8EE49A1AEB0D9800BA77B5 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -105,9 +113,13 @@
 		2FAA21231AEA1BC700EBE0E8 /* WWDC2015 */ = {
 			isa = PBXGroup;
 			children = (
+				2F75D6D51AEDAC7D009B58BC /* 11021184_10205358114785703_2999020130509293661_n.jpg */,
 				2FAA21261AEA1BC700EBE0E8 /* AppDelegate.swift */,
 				2FAA21281AEA1BC700EBE0E8 /* ViewController.swift */,
 				2F8EE49A1AEB0D9800BA77B5 /* AboutView.swift */,
+				2F75D6D31AEDA96F009B58BC /* fess.png */,
+				2F75D6D11AEDA5E6009B58BC /* IMG_6010.jpg */,
+				2F75D6CF1AEDA137009B58BC /* notesnap.jpeg */,
 				2F8BE6A91AEC48E000C982F0 /* ViewsInfo.plist */,
 				2F8BE6A71AEC474F00C982F0 /* me.jpg */,
 				2FE85B7B1AEB91A700E84EC5 /* HomeView.swift */,
@@ -244,13 +256,17 @@
 			files = (
 				2F8BE6A81AEC474F00C982F0 /* me.jpg in Resources */,
 				2FAA212C1AEA1BC700EBE0E8 /* Main.storyboard in Resources */,
+				2F75D6D41AEDA96F009B58BC /* fess.png in Resources */,
 				2FE85B8D1AEBB79000E84EC5 /* tealSquare.png in Resources */,
 				2FE85B8A1AEBB79000E84EC5 /* orangeCircle.png in Resources */,
 				2FE85B931AEBBC2000E84EC5 /* wwdcLogoNoCorners.png in Resources */,
 				2FE85B7E1AEBB13800E84EC5 /* wwdcLogo.png in Resources */,
+				2F75D6D61AEDAC7D009B58BC /* 11021184_10205358114785703_2999020130509293661_n.jpg in Resources */,
 				2FE85B891AEBB79000E84EC5 /* yellowCircle.png in Resources */,
+				2F75D6D21AEDA5E6009B58BC /* IMG_6010.jpg in Resources */,
 				2F8BE6AA1AEC48E000C982F0 /* ViewsInfo.plist in Resources */,
 				2FE85B8F1AEBB79000E84EC5 /* pinkSquare.png in Resources */,
+				2F75D6D01AEDA137009B58BC /* notesnap.jpeg in Resources */,
 				2FE85B901AEBB79000E84EC5 /* purpleSquare.png in Resources */,
 				2FAA21311AEA1BC800EBE0E8 /* LaunchScreen.xib in Resources */,
 				2FAA212E1AEA1BC700EBE0E8 /* Images.xcassets in Resources */,

@@ -23,10 +23,19 @@ class ViewController: UIViewController, UIScrollViewDelegate, HomeViewController
         homeScrollView.contentSize = CGSizeMake(homeScrollView.frame.width*3, homeScrollView.frame.height*3);
         homeScrollView.delegate = self
         homeScrollView.bounces = false
+        homeScrollView.scrollEnabled = false
         homeScrollView.showsHorizontalScrollIndicator = false
         homeScrollView.showsVerticalScrollIndicator = false
         
         view.addSubview(homeScrollView)
+        
+        let screenWidthHalf = screenSize.width/2;
+        let screenHeightHalf = screenSize.height/2;
+        let contentSizeThirdWidth = homeScrollView.contentSize.width/3
+        let contentSizeThirdHeight = homeScrollView.contentSize.height/3
+        
+        var frameToUse = CGRectMake(0,0,0,0)
+        
         var i:Double = 0
         var y:Double = 0
         
@@ -45,7 +54,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, HomeViewController
                     homeView.delegate = self
                     homeScrollView.addSubview(homeView)
                 } else {
-                    let colorView = AboutView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height), num:num)
+                    let colorView = AboutView(frame: CGRectMake(xPos, yPos, self.view.frame.size.width, self.view.frame.size.height), num:num, smallViewFrame:frameToUse)
                     colorView.titleLabel.font = UIFont(name: "HelveticaNeue-Medium",
                         size: 25.0)
                     homeScrollView.addSubview(colorView)
@@ -65,13 +74,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, HomeViewController
     }
     /*
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        
-        let screenWidthHalf = screenSize.width/2;
-        let screenHeightHalf = screenSize.height/2;
-        
-        let contentSizeThirdWidth = scrollView.contentSize.width/3
-        let contentSizeThirdHeight = scrollView.contentSize.height/3
-        
+    
         
         if ((scrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) && (scrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight) {
             println("Upper left")
@@ -115,36 +118,82 @@ class ViewController: UIViewController, UIScrollViewDelegate, HomeViewController
     */
     
     func updateContentOffsetPosition(withTag: Int) {
-        let contentSizeThirdWidth = homeScrollView.contentSize.width/5 * 2
-        let contentSizeThirdHeight = homeScrollView.contentSize.height/5 * 2
+        let screenWidthHalf = screenSize.width/2;
+        let screenHeightHalf = screenSize.height/2;
+        let contentSizeThirdWidth = homeScrollView.contentSize.width/3
+        let contentSizeThirdHeight = homeScrollView.contentSize.height/3
+        
         switch (withTag) {
         case 1:
-            self.homeScrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+            if !((homeScrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) || !(self.homeScrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight) {
+                self.homeScrollView.setContentOffset(CGPointMake(screenSize.width * 0.25, screenSize.height * 0.15), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
+            
             break;
         case 2:
-            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, 0), animated: true)
+            if !(homeScrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight) {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth,screenSize.height * 0.15), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
+            
             break;
         case 3:
-            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, 0), animated: true)
+            if !((homeScrollView.contentOffset.x + screenWidthHalf) > contentSizeThirdWidth * 2 + 10) || !(homeScrollView.contentOffset.y + screenHeightHalf <  contentSizeThirdHeight){
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2 - screenSize.width * 0.25,screenSize.height * 0.15), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
             break;
         case 4:
-            self.homeScrollView.setContentOffset(CGPointMake(0, contentSizeThirdHeight), animated: true)
+            if !((homeScrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) {
+                self.homeScrollView.setContentOffset(CGPointMake(screenSize.width * 0.25, contentSizeThirdHeight), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
             break;
         case 5:
-            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight), animated: true)
+            
+            if !((homeScrollView.contentOffset.x + screenWidthHalf) > contentSizeThirdWidth*2) {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2 - screenSize.width * 0.25, contentSizeThirdHeight), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
             break;
         case 6:
-            self.homeScrollView.setContentOffset(CGPointMake(0, contentSizeThirdHeight * 2), animated: true)
+            
+            if !((homeScrollView.contentOffset.y + screenHeightHalf) > contentSizeThirdHeight * 2) || !((homeScrollView.contentOffset.x + screenWidthHalf) < contentSizeThirdWidth) {
+                self.homeScrollView.setContentOffset(CGPointMake(screenSize.width * 0.25, contentSizeThirdHeight * 2 - screenSize.height * 0.15), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
+            
             break;
         case 7:
-            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight * 2), animated: true)
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight * 2 - screenSize.height * 0.15), animated: true)
+            
+            if !((homeScrollView.contentOffset.y + screenHeightHalf) > contentSizeThirdHeight * 2) {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight * 2 - screenSize.height * 0.15), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
+            
             break;
         case 8:
-            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2, contentSizeThirdHeight * 2), animated: true)
+            self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2 - screenSize.width * 0.25, contentSizeThirdHeight * 2 - screenSize.height * 0.15), animated: true)
+            
+            if !((homeScrollView.contentOffset.y + screenHeightHalf) > contentSizeThirdHeight * 2) || !((homeScrollView.contentOffset.x + screenWidthHalf) > contentSizeThirdWidth * 2) {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth * 2 - screenSize.width * 0.25, contentSizeThirdHeight * 2 - screenSize.height * 0.15), animated: true)
+            } else {
+                self.homeScrollView.setContentOffset(CGPointMake(contentSizeThirdWidth, contentSizeThirdHeight), animated: true)
+            }
             break;
         default:
             break;
         }
+        
     }
 
     override func didReceiveMemoryWarning() {
